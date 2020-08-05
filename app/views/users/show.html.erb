@@ -27,3 +27,24 @@
     </div>
 </div>
 
+<div class ="mybook_index">
+	<h2>Book detail</h2>
+	<table>
+	   <thead>
+		 <tr>
+			<th>Title</th>
+			<th>Opinion</th>
+		 </tr>
+	   </thead>
+	  <tbody>
+		<% @books.each do |book| %>
+		<tr>
+			<td><%= attachment_image_tag @user, :profile_image, format: 'jpeg', size: "100x100", fallback: "no_image.jpg" %>
+	        <%= @user.name %></td>
+			<td class="title_area"><%= book.title %></td>
+			<td class= "body_area"><%= book.body %></td>
+		</tr>
+		<% end %>
+	  </tbody>
+    </table>
+</div>
