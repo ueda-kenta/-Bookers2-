@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @books = Book.all
   end
 
+  def index
+    @users = User.all
+  end
+
   def create
     @user = User.new(params[:id])
     @user.save
