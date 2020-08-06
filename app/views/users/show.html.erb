@@ -1,4 +1,15 @@
 <h1>マイページ</h1>
+<!-- エラー文表示 -->
+<% @user.errors.full_messages.each do |message| %>
+   <div class="form-error">
+   	  <%= message %>
+    </div>
+<% end %>
+<% @book.errors.full_messages.each do |message| %>
+   <div class="form-error">
+      <%= message %>
+    </div>
+    <% end %>
 <div class = "side_bar">
    <div class= "profile">
       <h2>User info</h2>

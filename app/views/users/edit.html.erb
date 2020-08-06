@@ -1,3 +1,15 @@
+<!-- エラー文表示 -->
+<% @user.errors.full_messages.each do |message| %>
+   <div class="form-error">
+   	  <%= message %>
+    </div>
+<% end %>
+<% @book.errors.full_messages.each do |message| %>
+   <div class="form-error">
+   	  <%= message %>
+    </div>
+<% end %>
+<!-- プロフィール編集 -->
 <%= form_for(@user) do |f| %>
 <p>Name</p>
 <%= f.text_field :name, autofocus: true, placeholder:"名前"%>

@@ -18,6 +18,7 @@
    display: block;
    clear: both;
 }
+/*ヘッダーまわり*/
 header{
 	height: 70px;
 	width: 100%;
@@ -27,4 +28,8 @@ header{
 	list-style: none;
 	float: right;
 	padding-left: 20px;
+}
+/*エラー文*/
+.form-error{
+	color: red;
 }
