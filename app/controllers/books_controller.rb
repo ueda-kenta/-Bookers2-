@@ -10,7 +10,7 @@ class BooksController < ApplicationController
 		@books = Book.all
 		@book.user_id = current_user.id
 		if @book.save
-		redirect_to book_path(book.id)
+		redirect_to book_path(@book.id)
 	    else
 		render "users/show"
 	    end
@@ -23,7 +23,7 @@ class BooksController < ApplicationController
 
 	def show
 		@book = Book.find(params[:id])
-		@user = current_user
+		@user = User.find(params[:id])
 	end
 
 	def edit
@@ -33,7 +33,7 @@ class BooksController < ApplicationController
 	def update
 		book = Book.find(params[:id])
 		if book.update(book_params)
-		redirect_to book_path(book)
+		redirect_to book_path(book.id)
 	    else
 	    render :edit
 	    end
@@ -48,7 +48,7 @@ class BooksController < ApplicationController
 
 	private
 	def book_params
-		params.require(:book).permit(:title, :body)
+		params.require(:book).permit(:title, :body,:user_id)
     end
 
 end

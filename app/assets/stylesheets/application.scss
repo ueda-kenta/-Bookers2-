@@ -13,23 +13,43 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 .clearfix::after {
    content: "";
    display: block;
    clear: both;
 }
+.copyright{
+	text-align: right;
+}
 /*ヘッダーまわり*/
 header{
 	height: 70px;
 	width: 100%;
-    background-color: yellow;
+    background-color: black;
 }
 .header_list{
 	list-style: none;
 	float: right;
-	padding-left: 20px;
+	padding-left: 40px;
+	color: gray;
+}
+.title{
+	color: white;
 }
 /*エラー文*/
 .form-error{
 	color: red;
+}
+/*トップページ*/
+.top_msg{
+	text-align: center;
+}
+.link{
+	margin: 0 auto;
+}
+.btn{
+	display:  flex;
+	flex-direction: column;
 }
