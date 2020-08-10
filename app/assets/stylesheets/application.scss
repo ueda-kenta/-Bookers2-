@@ -23,9 +23,15 @@
 .copyright{
 	text-align: right;
 }
+.container{
+	margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 /*ヘッダーまわり*/
 header{
-	height: 70px;
+	height: 50px;
 	width: 100%;
     background-color: black;
 }
@@ -33,10 +39,14 @@ header{
 	list-style: none;
 	float: right;
 	padding-left: 40px;
+	padding-top: 7px;
 	color: gray;
+
 }
 .title{
+	display: inline;
 	color: white;
+	font-size: 20px;
 }
 /*エラー文*/
 .form-error{
@@ -49,7 +59,25 @@ header{
 .link{
 	margin: 0 auto;
 }
-.btn{
-	display:  flex;
-	flex-direction: column;
+/*サイドバー*/
+.side_bar{
+	width: 25%;
+	float: left;
+}
+.create_btn{
+	width: 55%;
+}
+.container{
+}
+.row{
+}
+// ユーザーぺーじ
+.main_contents{
+	float: left;
+	width: 50%;
+	margin: 0 auto;
+}
+.col-xs-3 {
+    width: 25%;
+    float: left;
 }
