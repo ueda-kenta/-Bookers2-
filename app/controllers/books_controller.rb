@@ -20,8 +20,8 @@ class BooksController < ApplicationController
 
 	def index
 		@books = Book.all
+		# @user = @books.user
 		@users = User.all
-		@book = Book.new
 	end
 
 	def show
@@ -59,5 +59,9 @@ class BooksController < ApplicationController
 	def book_params
 		params.require(:book).permit(:title, :body,:user_id)
     end
+
+   def user_params
+   	    params.require(:user).permit(:name, :introduction, :profile_image_id)
+   end
 
 end
