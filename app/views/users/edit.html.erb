@@ -1,26 +1,20 @@
 <!-- エラー文表示 -->
 <% @user.errors.full_messages.each do |message| %>
    <div class="form-error">
-   	  <%= message %>
+   	  <%= message %>error
     </div>
 <% end %>
-<% @book.errors.full_messages.each do |message| %>
-   <div class="form-error">
-   	  <%= message %>
-    </div>
-<% end %>
+<h1>User info</h1>
 <!-- プロフィール編集 -->
 <%= form_for(@user) do |f| %>
-<p>Name</p>
-<%= f.text_field :name, autofocus: true, placeholder:"名前"%>
+<p>Name<%= f.text_field :name, autofocus: true, placeholder:"名前"%></p>
 <!-- 画像編集 -->
 <div>
    <%= attachment_image_tag @user, :profile_image,format: 'jpeg', size: "100x100", fallback: "no_image.jpg" %>
-   <p>ProfileImage</p>
+   <p>Image</p>
    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
    <!-- introduction -->
-   <p>introduction</p>
-   <%= f.text_area :introduction, autofocus: true, placeholder:"introduction" %>
+   <p>introduction<%= f.text_area :introduction, autofocus: true, placeholder:"introduction" %></p>
 </div>
-<%= f.submit "変更を保存", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+<%= f.submit "Update User", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
 <% end %>

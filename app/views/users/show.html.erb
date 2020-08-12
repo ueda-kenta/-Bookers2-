@@ -1,4 +1,4 @@
-<!-- エラー文表示 -->
+<!-- エラー文、フラッシュ表示 -->
 <% @user.errors.full_messages.each do |message| %>
    <div class="form-error">
    	  <%= message %>
@@ -9,6 +9,7 @@
       <%= message %>
       <%= "error" %>
     </div>
+    <div class="flash"><%= flash[:notice] %></div>
 <% end %>
 <!-- コンテンツ全体 -->
 <div class ="container" >
@@ -28,12 +29,10 @@
                     </tbody>
                 </table>
          <!-- 編集ボタン -->
-                <% if @user.id == current_user.id %>
                     <p><%= link_to edit_user_path(@user) do %>
                     <span class="glyphicon glyphicon-wrench btn btn-default create_btn" aria-hidden="true">
                     </span></p>
                     <% end %>
-                <% end %>
                <!-- 新規投稿 -->
                 <h1>New book</h1>
                 <div class= "new_book">
