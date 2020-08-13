@@ -15,7 +15,9 @@
     <% end %>
     <div class = "clearfix">
     <header>
+      <div class="container">
       <p class="title">Bookers</p>
+      <div class="nav_list">
       <ul class="header_list">
         <!-- ログイン時 -->
         <% if user_signed_in? %>
@@ -47,6 +49,8 @@
             </li>
         <% end %>
     </ul>
+  </div>
+  </div>
     </header>
   </div>
     <%= yield %>
